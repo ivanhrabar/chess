@@ -8,9 +8,9 @@ notifications: # set notification options
   email:
     recipients:
     - ivan.grabar15@gmail.com
-# change is when the repo status goes from pass to fail or vice versa
+# change is when the repo status goes from pass to fail or vice version
 #	on_success: [always|never|change]
-	on_success: change
-	on_failure: always
+    on_success: change
+    on_failure: always
 # Or we could just disable all email
 #        email: false
