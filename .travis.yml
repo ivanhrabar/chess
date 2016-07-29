@@ -1,14 +1,11 @@
+sudo: required
+dist: trusty
+
 language: node_js
 
 node_js:
 #  - "6.3.0"
   - "4.4.7"
-
-env:
-  #matrix:
-    - OS_TYPE=centos OS_VERSION=7
-    services:
-    - docker
 
 notifications: # set notification options
   email:
