@@ -17,6 +17,7 @@ before_script:
 #    - sudo apt-get install -y mongodb-org=2.6.6 mongodb-org-server=2.6.6 mongodb-org-shell=2.6.6 mongodb-org-mongos=2.6.6 mongodb-org-tools=2.6.6
 #    - sleep 15 #mongo may not respond immediatly
     - mongo --version
+    - npm run start
 #    - mongo chessMEAN --eval 'db.createUser("Billy", "pass");
 #    - mongo chessMEAN --eval 'db.addUser("Billy", "pass");'
 
