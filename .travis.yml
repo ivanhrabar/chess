@@ -6,13 +6,15 @@ language: node_js
 node_js:
   - "4.4.7"
 
-before_script:
+install:
     - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
     - echo 'deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse' | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
     - sudo apt-get update
     - sudo apt-get install -y mongodb-org
     - sleep 5 #mongo may not respond immediatly
     - mongo --version
+
+before_script:
     - npm run start&
 
 notifications: # set notification options
@@ -21,5 +23,5 @@ notifications: # set notification options
     - ivan.grabar15@gmail.com
 # change is when the repo status goes from pass to fail or vice version
 #	on_success: [always|never|change]
-    on_success: change
+    on_success: always
     on_failure: always
