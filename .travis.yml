@@ -4,8 +4,8 @@ dist: trusty
 language: node_js
 
 node_js:
-#  - "4.4.7"
-  - "node"
+  - "4.4.7"
+#  - "node"
 
 before_install:
     - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
