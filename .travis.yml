@@ -14,20 +14,21 @@ before_script:
     - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
     - echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
     - sudo apt-get update
-    - sudo apt-get install -y mongodb-org=2.6.6 mongodb-org-server=2.6.6 mongodb-org-shell=2.6.6 mongodb-org-mongos=2.6.6 mongodb-org-tools=2.6.6
+#    - sudo apt-get install -y mongodb-org=2.6.6 mongodb-org-server=2.6.6 mongodb-org-shell=2.6.6 mongodb-org-mongos=2.6.6 mongodb-org-tools=2.6.6
+    - sudo apt-get install mongodb-org
     - sleep 10 #mongo may not respond immediatly
     - mongo --version
     - npm run start&
 #    - mongo chessMEAN --eval 'db.createUser("Billy", "pass");
 #    - mongo chessMEAN --eval 'db.addUser("Billy", "pass");'
 
-#notifications: # set notification options
-#  email:
-#    recipients:
-#    - ivan.grabar15@gmail.com
+notifications: # set notification options
+  email:
+    recipients:
+    - ivan.grabar15@gmail.com
 # change is when the repo status goes from pass to fail or vice version
 #	on_success: [always|never|change]
-#    on_success: change
-#    on_failure: always
+    on_success: change
+    on_failure: always
 # Or we could just disable all email
 #        email: false
