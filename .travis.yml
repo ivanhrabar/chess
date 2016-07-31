@@ -23,7 +23,6 @@ before_deploy:
     - mkdir deploy
     - cp "app.zip" "deploy/app.zip"
 deploy:
-  on:
     skip_cleanup: true
     provider: s3
     #AWS Credentials need to be set in Travis
@@ -31,6 +30,8 @@ deploy:
     secret_access_key: $AWS_ACCESS_SECRET
     bucket: "chess-bucket"
     local-dir: deploy
+    on:
+      all_branches: true
 
 notifications: # set notification options
   email:
