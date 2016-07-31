@@ -30,7 +30,7 @@ deploy:
     #AWS Credentials need to be set in Travis
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_ACCESS_SECRET
-    bucket: chess-bucke"
+    bucket: chess-bucket
     region: eu-central-1
     local-dir: deploy
     on:
