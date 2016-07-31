@@ -31,7 +31,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_ACCESS_SECRET
     bucket: chess-bucket
-    upload-dir: chess
+#    upload-dir: chess
     region: eu-central-1
     local-dir: deploy
     on:
