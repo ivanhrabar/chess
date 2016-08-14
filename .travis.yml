@@ -31,9 +31,9 @@ deploy:
         access_key_id: $AWS_ACCESS_KEY
         secret_access_key: $AWS_ACCESS_SECRET
         bucket: chess-bucket
-	skip_cleanup: true
+        skip_cleanup: true
 #	    upload-dir: chess
-        region: eu-central-1	
+        region: eu-central-1
         local-dir: deploy
         on:
           all_branches: true
