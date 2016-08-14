@@ -27,7 +27,7 @@ before_deploy:
 
 deploy:
 #    skip_cleanup: true
-    - provider: s3
+      - provider: s3
         #AWS Credentials need to be set in Travis
         access_key_id: $AWS_ACCESS_KEY
         secret_access_key: $AWS_ACCESS_SECRET
@@ -38,7 +38,7 @@ deploy:
         on:
           all_branches: true
 
-    - provider: codedeploy
+      - provider: codedeploy
         access-key-id: $AWS_ACCESS_KEY
         secret-access-key: $AWS_ACCESS_SECRET
         bucket: chess-bucket
