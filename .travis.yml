@@ -37,14 +37,13 @@ deploy:
     on:
       all_branches: true
 
-#    provider: opsworks
-#    access-key-id: $AWS_ACCESS_KEY
-#    secret-access-key: $AWS_ACCESS_SECRET
-#    app-id: 2496ee1b-34bd-4e72-b80e-67b854d57362
-#    on:
-#        all_branches: true
-#    wait-until-deployed: true
-
+    provider: opsworks
+    access-key-id: $AWS_ACCESS_KEY
+    secret-access-key: $AWS_ACCESS_SECRET
+    app-id: 2496ee1b-34bd-4e72-b80e-67b854d57362
+    on:
+        all_branches: true
+    wait-until-deployed: true
 
 notifications: # set notification options
   email:
@@ -53,4 +52,4 @@ notifications: # set notification options
 # change is when the repo status goes from pass to fail or vice version
 #	on_success: [always|never|change]
     on_success: always
-    on_failure: always
+#    on_failure: always
