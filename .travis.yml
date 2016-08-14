@@ -28,27 +28,27 @@ before_deploy:
 deploy:
 #    skip_cleanup: true
     - provider: s3
-    #AWS Credentials need to be set in Travis
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_ACCESS_SECRET
-    bucket: chess-bucket
-#    upload-dir: chess
-    region: eu-central-1
-    local-dir: deploy
-    on:
-      all_branches: true
+        #AWS Credentials need to be set in Travis
+        access_key_id: $AWS_ACCESS_KEY
+        secret_access_key: $AWS_ACCESS_SECRET
+        bucket: chess-bucket
+#	    upload-dir: chess
+        region: eu-central-1	
+        local-dir: deploy
+        on:
+          all_branches: true
 
     - provider: codedeploy
-    access-key-id: $AWS_ACCESS_KEY
-    secret-access-key: $AWS_ACCESS_SECRET
-    bucket: chess-bucket
-    region: eu-central-1
-    key: app.zip
-    application: chess
-    deployment_group: chessgroup
-    on:
-        all_branches: true
-    wait-until-deployed: true
+        access-key-id: $AWS_ACCESS_KEY
+        secret-access-key: $AWS_ACCESS_SECRET
+        bucket: chess-bucket
+        region: eu-central-1
+        key: app.zip
+        application: chess
+        deployment_group: chessgroup
+        on:
+            all_branches: true
+        wait-until-deployed: true
 
 notifications: # set notification options
   email:
