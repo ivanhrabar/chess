@@ -26,8 +26,8 @@ before_deploy:
 #    - tar -zcvf chess.tar.gz deploy
 
 deploy:
-        skip_cleanup: true
       - provider: s3
+	skip_cleanup: true
         #AWS Credentials need to be set in Travis
         access_key_id: $AWS_ACCESS_KEY
         secret_access_key: $AWS_ACCESS_SECRET
