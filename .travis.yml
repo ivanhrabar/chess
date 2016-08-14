@@ -34,7 +34,7 @@ deploy:
 #	    upload-dir: chess
 #        region: eu-central-1
 #        local-dir: deploy
-#        on: &1
+#        on:
 #          all_branches: true
 
       - provider: codedeploy
@@ -45,7 +45,8 @@ deploy:
         key: app.zip
         application: chess
         deployment_group: chessgroup
-        on: *1
+        on:
+          all_branches: true
         wait-until-deployed: true
 
 notifications: # set notification options
