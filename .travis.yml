@@ -36,11 +36,14 @@ deploy:
     local-dir: deploy
     on:
       all_branches: true
-
-    provider: opsworks
+      
+- provider: codedeploy
     access-key-id: $AWS_ACCESS_KEY
     secret-access-key: $AWS_ACCESS_SECRET
-    app-id: 2496ee1b-34bd-4e72-b80e-67b854d57362
+    bucket: chess-bucket
+    key: app.zip
+    application: chess
+    deployment_group: chessgroup
     on:
         all_branches: true
     wait-until-deployed: true
