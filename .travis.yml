@@ -20,10 +20,9 @@ before_script:
     - npm start&
 
 before_deploy:
-     zip app.zip * --exclude=*node_modules*
-     mkdir deploy
-     cp app.zip deploy/app.zip
-#     tar -zcvf chess.tar.gz deploy
+     - zip -r app.zip * --exclude=*node_modules*
+     - mkdir -p deploy
+     - mv app.zip deploy/app.zip
 
 deploy:
       - provider: s3
