@@ -1,5 +1,5 @@
-#sudo: required
-#dist: trusty
+sudo: required
+dist: trusty
 
 language: node_js
 
@@ -38,16 +38,16 @@ deploy:
     on:
       all_branches: true
       
-    provider: codedeploy
-    access-key-id: $AWS_ACCESS_KEY
-    secret-access-key: $AWS_ACCESS_SECRET
-    bucket: chess-bucket
-    key: app.zip
-    application: chess
-    deployment_group: chessgroup
-    on:
-        all_branches: true
-    wait-until-deployed: true
+#    provider: codedeploy
+#    access-key-id: $AWS_ACCESS_KEY
+#    secret-access-key: $AWS_ACCESS_SECRET
+#    bucket: chess-bucket
+#    key: app.zip
+#    application: chess
+#    deployment_group: chessgroup
+#    on:
+#        all_branches: true
+#    wait-until-deployed: true
 
 notifications: # set notification options
   email:
