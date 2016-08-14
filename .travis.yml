@@ -17,7 +17,7 @@ before_install:
     - sudo apt-get install -y zip
 
 before_script:
-    - npm start&
+    - npm start #&
 
 before_deploy:
     - zip app.zip * --exclude=*node_modules*
