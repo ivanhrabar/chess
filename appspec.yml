@@ -2,6 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /
+    destination: /home/ec2-user/
 
-
+hooks:
+  Install:
+      - location: /home/ec2-user/scripts/install_dependencies
+        timeout: 3600
