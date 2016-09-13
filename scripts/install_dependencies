@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo yum -y install nodejs npm mongodb
-
+yum -y install nodejs npm --enablerepo=epel
+npm install
 
