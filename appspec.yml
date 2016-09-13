@@ -7,4 +7,5 @@ files:
 hooks:
   Install:
       - location: /home/ec2-user/scripts/install_dependencies
-        timeout: 3600
+        timeout: 300
+        runas: ec2-user
